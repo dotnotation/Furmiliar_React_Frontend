@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function PetsList() {
   return (
-    <div>PetsList</div>
+    <div>
+        <h1>Pet's List</h1>
+    </div>
   )
 }
