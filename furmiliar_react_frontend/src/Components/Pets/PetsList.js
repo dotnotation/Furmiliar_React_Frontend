@@ -15,12 +15,14 @@ export default function PetsList() {
     // in the callback you want to call dispatch and the action creator
     console.log(pets)
     return (
-    <div>
-        <h1>Pet's List</h1>
-        {/* {pets.map(p => <span key={p.id} className="pet-card">
-            {p.name}
-        </span>)} */}
-        {pets.map(p => <li key={p.id}>{p.name}</li>)}
+    <div className='pet-cards'>
+        <h1>Pets</h1>
+
+        {pets.map(p => 
+            <span className='pet-card' key={p.id}>
+                <h2>{p.name}</h2>
+                <img className="pet-photo" src={p.photo}></img>
+            </span>)}
     </div>
     )
 }
