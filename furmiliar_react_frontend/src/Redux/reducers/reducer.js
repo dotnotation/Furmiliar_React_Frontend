@@ -2,9 +2,8 @@ import { combineReducers } from 'redux'
 import petsReducers from './petsReducers'
 import toysReducers from './toysReducers'
 
-const reducers = combineReducers({
-    petsReducers, 
-    toysReducers
+export default combineReducers({
+    pets: petsReducers, 
+    toys: toysReducers
 })
 
-export default reducers
