@@ -1,0 +1,8 @@
+export const ADD_PETS = "ADD_PETS"
+export const REMOVE_PETS = "REMOVE_PETS"
+export const EDIT_PETS = "EDIT_PETS"
+export const SET_PETS = "SET_PETS"
+export const SET_TOYS = "SET_TOYS"
+export const ADD_TOYS = "ADD_TOYS"
+export const REMOVE_TOYS = "REMOVE_TOYS"
+export const EDIT_TOYS = "EDIT_TOYS"
