@@ -1,4 +1,4 @@
-import { SET_PETS, ADD_PET, REMOVE_PET, EDIT_PET } from "./actionTypes"
+import { SET_PETS, ADD_PET, REMOVE_PET, EDIT_PET } from './actionTypes'
 
 export const fetchPets = () => {
     return (dispatch) => {
