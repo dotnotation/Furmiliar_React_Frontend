@@ -15,6 +15,8 @@ export default function PetForm() {
         dispatch(adoptPet({name: name, photo: photo}, navigate))
         setName("")
         setPhoto("")
+        // can't actually navigate here because of async to need to pass navigation to action
+        // you can't use hooks in redux but you can pass the function
     }
 
     return (
