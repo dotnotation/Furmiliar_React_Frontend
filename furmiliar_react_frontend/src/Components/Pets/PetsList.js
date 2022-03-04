@@ -9,7 +9,7 @@ export default function PetsList() {
     // console.log(pets)
     // console.log(dispatch(fetchPets()))
     // console.log(useEffect())
-    debugger
+    // debugger
 
     useEffect(() => {
         dispatch(fetchPets())
