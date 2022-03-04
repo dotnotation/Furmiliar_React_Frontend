@@ -16,15 +16,7 @@ export default function PetsList() {
     return (
     <div className='pets-list'>
         {console.log(pets)}
-        {/* {pets.map(p => {
-            return (
-            <span className='pet-card' key={p.id}>
-                <h2>{p.name}</h2>
-                <img className="pet-photo" src={p.photo} alt={p.name}></img>
-            </span>)
-        })} */}
         {pets.map(p => <PetCard id={p.id} name={p.name} photo={p.photo}/>)}
-        {/* {pets.map(p => <li key={p.id}>{p.name}</li>)} */}
     </div>
     )
 }

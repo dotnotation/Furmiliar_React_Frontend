@@ -5,6 +5,15 @@ export default function petsReducers(state = {pets: []}, action){
         case SET_PETS:
             return action.payload
         
+        case ADD_PET:
+            return state
+
+        case REMOVE_PET:
+            return state
+
+        case EDIT_PET:
+            return state
+        
         default:
             return state
     }
