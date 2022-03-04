@@ -6,10 +6,10 @@ Each pet has their own virtual toy box where you can input all the toys your pet
 <h3>Installing Furmiliar:</h3>
 To install Furmiliar, follow these steps:
 First you will need to clone the backend here: https://github.com/dotnotation/Furmiliar_React_Backend
-Install all required gems in the Gemfile by running `bundle install`. Create your database by running `rails db:migrate`. (Optional) Seed your database with the default dummy data by running `rails db:seed`. Run `rails s` in the terminal to run the ApplicationController. Open the port in the browser (rails defaults to port 3000) if you want to see the data in the api. For toy box information visit http://localhost:3000/pets. For toy information visit http://localhost:3000/toys. To exit the server run `ctrl + c` in the terminal. You will need to clone the frontend next: https://github.com/dotnotation/Furmiliar_React_Frontend. Run `npm install` or `yarn install` to add all dependencies. To start up the server use `yarn start` or `npm start`. 
+Install all required gems in the Gemfile by running `bundle install`. Create your database by running `rails db:migrate`. (Optional) Seed your database with the default dummy data by running `rails db:seed`. Run `rails s` in the terminal to run the ApplicationController. Open the port in the browser (rails defaults to port 3000) if you want to see the data in the api. For all pet information visit http://localhost:3000/pets. For all toy information visit http://localhost:3000/toys. To exit the server run `ctrl + c` in the terminal. You will need to clone the frontend next: https://github.com/dotnotation/Furmiliar_React_Frontend. Run `npm install` or `yarn install` to add all dependencies. To start up the server use `yarn start` or `npm start`. 
 
 <h3>Using Furmiliar:</h3>
-First, click on the toy box you want to add more toys to, or create your own toy box. Then you can create, read, update, or delete any of the toys. The only required field for both the toy box and the toy is that it must have a name. 
+You can view all pets or register your own pet. Then you can select your pet and add toys to their toy box. There is full CRUD functionality with this app. Currently, their is no user aspect to this app which means you can CRUD other people's pets. The plan is to add users later. 
 
 
 <h3>Contributors:</h3>
