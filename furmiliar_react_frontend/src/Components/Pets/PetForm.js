@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { adoptPet } from '../../Redux/actions/petActions'
+import { useNavigate } from 'react-router'
 
 export default function PetForm() {
     const [name, setName] = useState('')
     const [photo, setPhoto] = useState('')
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     function handleSubmit(e){
         e.preventDefault()
         // take data and send it to redux so need dispatch
-        dispatch(adoptPet({name: name, photo: photo}))
+        dispatch(adoptPet({name: name, photo: photo}, navigate))
         setName("")
         setPhoto("")
     }
