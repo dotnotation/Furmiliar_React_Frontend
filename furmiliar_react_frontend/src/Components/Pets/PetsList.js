@@ -20,8 +20,8 @@ export default function PetsList() {
 
     return (
     <div className='pets-list'>
-        {console.log(pets)}
-        {pets.map(p => <PetCard id={p.id} name={p.name} photo={p.photo}/>)}
+        {/* {console.log(pets)} */}
+        {pets.map(p => <PetCard key={p.id} id={p.id} name={p.name} photo={p.photo}/>)}
     </div>
     )
 }

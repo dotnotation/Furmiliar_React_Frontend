@@ -48,14 +48,17 @@ export function editPet(pet){
     }
 }
 
-export function rainbowBridge(pet){
+export function rainbowBridge(id){
     return dispatch => {
-        fetch(`http://localhost:3000/pets/${pet.id}`, {
-            method: "DELETE"
+        console.log(id)
+        fetch(`http://localhost:3000/pets/${id}`, {
+            method: 'DELETE'
         })
         .then(r => r.json())
         .then(pet => {
+            console.log("second then", pet)
             dispatch({ type: REMOVE_PET, payload: pet })
         })
+        // .catch(err => alert(err))
     }
 }

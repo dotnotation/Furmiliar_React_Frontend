@@ -1,7 +1,6 @@
 import { SET_TOYS, EDIT_TOY, REMOVE_TOY, ADD_TOY } from '../actions/actionTypes'
 
 const initialState = {
-    pets: [],
     toys: [],
     loading: false
 }

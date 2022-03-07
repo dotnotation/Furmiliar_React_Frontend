@@ -20,11 +20,18 @@ export default function petsReducers(state = initialState, action){
             }
 
         case REMOVE_PET: 
-            const newPets = state.pets.filter(pet => pet.id !== action.payload)
+            console.log("petsReducer", action.payload)
+            // const newPets = state.pets.filter(pet => pet.id !== action.payload)
+            // return {
+            //     ...state,
+            //     pets: newPets
+            // }
             return {
                 ...state,
-                pets: newPets
+                pets: state.pets.filter(pet => pet.id !== action.payload.id)
             }
+            // let newPets = state.pets.filter(pet => pet.id !== action.payload.toString())
+            // return { ...state, pets: newPets }
 
         case EDIT_PET:
             const petIndex = state.pets.findIndex(pet => pet.id === action.payload.id)
