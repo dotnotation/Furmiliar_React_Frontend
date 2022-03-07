@@ -9,8 +9,8 @@ export default function PetCard(props) {
     <div className='pet-card' key={props.id}>
         <h2>{props.name}</h2>
         <img className='pet-photo' src={props.photo} alt={props.name}></img>
-        <EditIcon id='pet-edit-button' data-action='edit' name='edit'/>
-        <DeleteIcon id='pet-delete-button' data-action='delete' name='delete' />
+        <EditIcon id='pet-edit-button' data-action='edit' aria-labelledby='edit-button-label' role='button'/>
+        <DeleteIcon id='pet-delete-button' data-action='delete'  aria-labelledby='delete-button-label' role='button'/>
     </div>
   )
 }
