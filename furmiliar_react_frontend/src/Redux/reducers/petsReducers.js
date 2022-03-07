@@ -23,7 +23,15 @@ export default function petsReducers(state = initialState, action){
             return state
 
         case EDIT_PET:
-            return state
+            const petIndex = state.pets.findIndex(pet => pet.id === action.payload.id)
+            return {
+                ...state,
+                pets: [
+                    ...state.pets.slice(0, petIndex),
+                    action.payload,
+                    ...state.pets.slice(petIndex + 1)
+                ]
+            }
         
         default:
             return state

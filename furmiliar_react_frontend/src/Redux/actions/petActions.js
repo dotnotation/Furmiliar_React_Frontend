@@ -30,3 +30,20 @@ export function adoptPet(pet, navigate){
         // also want upon submission and updating the dom to redirect to /pets
     }
 }
+
+export function editPet(pet){
+    return dispatch => {
+        fetch(`http://localhost:3000/pets/${pet.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(pet)
+        })
+        .then(r => r.json())
+        .then(pet => {
+            dispatch({ type: EDIT_PET, payload: pet })
+        })
+    }
+}
