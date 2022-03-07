@@ -47,3 +47,15 @@ export function editPet(pet){
         })
     }
 }
+
+export function rainbowBridge(pet){
+    return dispatch => {
+        fetch(`http://localhost:3000/pets/${pet.id}`, {
+            method: "DELETE"
+        })
+        .then(r => r.json())
+        .then(pet => {
+            dispatch({ type: REMOVE_PET, payload: pet })
+        })
+    }
+}

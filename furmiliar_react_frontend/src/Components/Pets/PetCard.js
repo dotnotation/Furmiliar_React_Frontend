@@ -2,7 +2,7 @@ import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import { useDispatch } from 'react-redux'
-import { editPet } from '../../Redux/actions/PetActions'
+import { editPet, rainbowBridge } from '../../Redux/actions/petActions'
 
 export default function PetCard(props) {
     console.log(props)
