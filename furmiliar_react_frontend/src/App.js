@@ -2,7 +2,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import './App.css'
 import PetForm from './Components/Pets/PetForm'
 import PetsList from './Components/Pets/PetsList'
-import Welcome from './Containers/Welcome'
+import Welcome from './Components/Home/Welcome'
 
 function App() {
   return (
