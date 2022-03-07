@@ -4,7 +4,7 @@ import { fetchPets } from '../../Redux/actions/petActions'
 import PetCard from './PetCard'
 
 export default function PetsList() {
-    const pets = useSelector(state => state.pets)
+    const pets = useSelector(state => state.petsReduce.pets)
     const dispatch = useDispatch()
     // console.log(pets)
     // console.log(dispatch(fetchPets()))
@@ -20,6 +20,7 @@ export default function PetsList() {
 
     return (
     <div className='pets-list'>
+        {console.log(pets)}
         {pets.map(p => <PetCard id={p.id} name={p.name} photo={p.photo}/>)}
     </div>
     )
