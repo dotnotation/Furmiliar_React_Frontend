@@ -4,17 +4,12 @@ import PetForm from './Components/Pets/PetForm'
 import PetsList from './Components/Pets/PetsList'
 import Welcome from './Components/Home/Welcome'
 import ToysList from './Components/Toys/ToysList'
-// import Background from './Assets/background-01.jpg'
+import NavigationBar from './Components/Navbar/Navbar'
 
 function App() {
   return (
     <div className="App">
-      <h1>Furmiliar</h1>
-      <Link to='/'>Home</Link><br></br>
-      <Link to='/pets'>Pets</Link><br></br>
-      <Link to='/pets/new'>Register Pet</Link><br></br>
-      <Link to='/toys'>Toys</Link><br></br>
-
+      <NavigationBar />
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route path='/pets' element={<PetsList />} />

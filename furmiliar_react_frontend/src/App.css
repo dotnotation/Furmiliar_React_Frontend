@@ -4,6 +4,13 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: #764C85;
+}
+
+.nav-bar {
+  background-color: #D5E9C5;
+  color: #764C85;
+  justify-content: space-between;
 }
 
 .pet-card {
