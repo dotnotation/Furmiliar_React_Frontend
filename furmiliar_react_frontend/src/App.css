@@ -13,6 +13,16 @@
   justify-content: space-between;
 }
 
+.container-fluid {
+  background-color: #A9E0FC;
+
+}
+
+.nav-link{
+  font-family: 'Roboto', sans-serif;
+  color: #764C85 !important;
+}
+
 .pet-card {
     text-align: center;
     border: grey solid 1px;
