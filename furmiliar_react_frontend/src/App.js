@@ -4,10 +4,11 @@ import PetForm from './Components/Pets/PetForm'
 import PetsList from './Components/Pets/PetsList'
 import Welcome from './Components/Home/Welcome'
 import ToysList from './Components/Toys/ToysList'
+// import Background from './Assets/background-01.jpg'
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <h1>Furmiliar</h1>
       <Link to='/'>Home</Link><br></br>
       <Link to='/pets'>Pets</Link><br></br>
