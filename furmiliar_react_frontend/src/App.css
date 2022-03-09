@@ -96,3 +96,7 @@ input[type="radio"] {
   grid-column: span 5;
 }
 
+.toy-box-message {
+  text-align: center;
+}
+

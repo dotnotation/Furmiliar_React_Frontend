@@ -24,7 +24,7 @@ export default function PetCard(props) {
 
     function openToyBox(){
       console.log("opening toy box", props.id)
-      navigate('/toys', {state: { pet_id: props.id}})
+      navigate('/toys', {state: { pet_id: props.id, name: props.name}})
     }
 
   return (
