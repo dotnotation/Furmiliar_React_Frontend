@@ -67,17 +67,18 @@
   height: 8rem;
   display: inline-block;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #A5E6DF
+  box-shadow: 3px 4px #A9E0FC
 }
 
 .toy-form {
   text-align: center;
   border: grey solid 1px;
   border-radius: 25px;
-  padding: 2rem;
-  width: 80rem;
-  height: 10rem;
+  padding: 3rem;
+  width: 90rem;
+  height: 12rem;
   margin: 2rem 2rem;
-  box-shadow: 3px 4px #A5E6DF
+  box-shadow: 3px 4px #A9E0FC;
+  display: inline-block;
 }
 
