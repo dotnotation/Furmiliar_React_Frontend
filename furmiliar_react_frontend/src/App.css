@@ -1,5 +1,5 @@
 .App {
-  background: url(./Assets/background-w-bleed.png) no-repeat center center fixed;
+  background: url(./Assets/background-w-bleed.png) ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,15 +7,13 @@
   color: #764C85;
 }
 
-.nav-bar {
-  background-color: #D5E9C5;
-  color: #764C85;
-  justify-content: space-between;
+.navbar {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 }
 
 .container-fluid {
-  background-color: #A9E0FC;
-
+  background-color: #D5E9C5;
 }
 
 .nav-link{
