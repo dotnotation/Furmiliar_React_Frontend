@@ -23,17 +23,9 @@ export default function ToysList() {
   console.log(petId)
   console.log(petName)
 
-  function renderToys(petId, toys){
-    // {/* maybe need to filter instead of map? */}
-    if (petId == toys.pet_id){
-      return toys.map(t => <ToyCard key={t.id} {...t}/>)
-    } else {
-      return <h4>There are no toys currently in this toy box.</h4>
-    }
-  }
-
   const currentPetToys = toys.filter(t => t.id == petId)
-  
+
+  // debugger
   return (
     <div className='toys-list'>
       <div className='toy-box-message'>
@@ -41,7 +33,7 @@ export default function ToysList() {
       </div>
     {console.log(toys)}
     {<ToyForm />}
-    {currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
+    {currentPetToys.length === 0 ? <h3>This pet has no toys yet. Please use the form above to add a toy.</h3> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
   </div>
   )
 }
