@@ -31,7 +31,7 @@ export function adoptPet(pet, navigate){
     }
 }
 
-export function editPet(pet){
+export function editPet(pet, editMode){
     return dispatch => {
         fetch(`http://localhost:3000/pets/${pet.id}`, {
             method: "PATCH",
@@ -44,6 +44,7 @@ export function editPet(pet){
         .then(r => r.json())
         .then(pet => {
             dispatch({ type: EDIT_PET, payload: pet })
+            editMode = false
         })
     }
 }

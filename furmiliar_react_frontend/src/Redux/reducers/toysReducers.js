@@ -2,7 +2,7 @@ import { SET_TOYS, EDIT_TOY, REMOVE_TOY, ADD_TOY } from '../actions/actionTypes'
 
 const initialState = {
     toys: [],
-    loading: false
+    editMode: false
 }
 
 export default function toysReducers(state = initialState, action){

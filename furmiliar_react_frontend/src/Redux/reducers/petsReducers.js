@@ -2,7 +2,7 @@ import { SET_PETS, ADD_PET, REMOVE_PET, EDIT_PET } from '../actions/actionTypes'
 
 const initialState = {
     pets: [],
-    loading: false
+    editMode: false
 }
 
 export default function petsReducers(state = initialState, action){
