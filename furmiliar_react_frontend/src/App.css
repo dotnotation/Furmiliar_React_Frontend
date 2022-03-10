@@ -3,7 +3,7 @@
   padding-bottom: 0rem !important;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .container-fluid {
@@ -11,13 +11,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 80px
 }
 
 .nav-link{
   font-family: 'Roboto', sans-serif;
   color: #764C85 !important;
-  font-size: large;
+  font-size: medium;
+  margin: 0 20px;
 }
 
 .pet-card {
@@ -62,11 +63,16 @@
   text-align: center;
   border: grey solid 1px;
   border-radius: 25px;
-  width: 25rem;
-  height: 8rem;
+  width: 80rem;
+  height: 6rem;
   display: inline-block;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #A9E0FC
+  padding: 2rem;
+  box-shadow: 3px 4px #A9E0FC;
+  margin-left: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
 }
 
 .toy-form {
@@ -95,7 +101,16 @@ input[type="radio"] {
   grid-column: span 5;
 }
 
+.full-width-pet {
+  grid-column: span 2;
+}
+
 .toy-box-message {
   text-align: center;
+}
+
+button {
+  color:#764C85;
+  background-color: #A9E0FC;
 }
 
