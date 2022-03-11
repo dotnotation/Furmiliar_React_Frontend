@@ -44,6 +44,9 @@ export default function PetEditForm() {
                <button type='submit'>Update Pet</button>
            </div>
        </form>
+       <div className='back-button'>
+        <button onClick={() => navigate(-1)}>Back</button>
+    </div>
    </div>
  )
 }
