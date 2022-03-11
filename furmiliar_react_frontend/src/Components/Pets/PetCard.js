@@ -2,7 +2,7 @@ import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import { useDispatch } from 'react-redux'
-import { editPet, rainbowBridge } from '../../Redux/actions/petActions'
+import { rainbowBridge } from '../../Redux/actions/petActions'
 import { useNavigate } from 'react-router'
 import { Stack } from 'react-bootstrap'
 

@@ -17,9 +17,9 @@ export default function ToysList() {
     dispatch(fetchToys())
   }, [])
 
-  useEffect(() => {
-    const pet = location.state
-  }, [location])
+  // useEffect(() => {
+  //   const pet = location.state
+  // }, [location])
   console.log(petId)
   console.log(petName)
 

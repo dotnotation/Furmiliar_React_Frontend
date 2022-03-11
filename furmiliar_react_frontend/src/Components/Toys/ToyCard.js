@@ -2,7 +2,7 @@ import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 import { useDispatch } from 'react-redux'
-import { editToy, deleteToy } from '../../Redux/actions/toyActions'
+import { deleteToy } from '../../Redux/actions/toyActions'
 
 export default function ToyCard(props) {
     console.log(props)

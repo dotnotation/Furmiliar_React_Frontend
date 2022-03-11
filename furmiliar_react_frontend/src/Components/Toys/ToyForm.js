@@ -45,9 +45,9 @@ export default function PetForm() {
 
     }
 
-    function handleChange(e) {
-        console.log(e.target.value)
-    }
+    // function handleChange(e) {
+    //     console.log(e.target.value)
+    // }
 
     return (
         <form className='toy-form' onSubmit={handleSubmit}>
