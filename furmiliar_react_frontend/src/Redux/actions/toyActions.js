@@ -25,7 +25,7 @@ export function adoptToy(toy){
     }
 }
 
-export function editToy(toy){
+export function editToy(toy, navigate){
     return dispatch => {
         fetch(`http://localhost:3000/toys/${toy.id}`, {
             method: "PATCH",
@@ -38,6 +38,7 @@ export function editToy(toy){
         .then(r => r.json())
         .then(toy => {
             dispatch({ type: EDIT_TOY, payload: toy })
+            navigate(-1)
         })
     }
 }

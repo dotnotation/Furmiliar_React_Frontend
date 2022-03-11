@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { editToy } from '../../Redux/actions/toyActions'
 
 export default function ToyEditForm() {
     const dispatch = useDispatch()
     const location = useLocation()
+    const navigate = useNavigate()
     
     const toyId = location.state.id
     const petId = location.state.pet_id
@@ -36,6 +38,20 @@ export default function ToyEditForm() {
     function handleSubmit(e){
         e.preventDefault()
         console.log(needs_repair)
+        dispatch(editToy({
+            id: id,
+            photo: photo,
+            name: name,
+            brand: brand,
+            price: price,
+            url: url,
+            rating: rating,
+            needs_repair: needs_repair,
+            squeaker: squeaker,
+            crinkle: crinkle,
+            treat: treat,
+            pet_id: pet_id
+        }, navigate))
     }
 
     return (
