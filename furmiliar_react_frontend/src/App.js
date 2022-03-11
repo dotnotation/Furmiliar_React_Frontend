@@ -13,11 +13,11 @@ function App() {
     <div className="App">
       <NavigationBar />
       <Routes>
-        <Route path='/' element={<Welcome />} />
-        <Route path='/pets' element={<PetsList />} />
-        <Route path='/pets/new' element={<PetForm />} />
-        <Route path='/pets/:id/edit' element={<PetEditForm />}/>
-        <Route path='/toys' element={<ToysList />} />
+          <Route path='/' element={<Welcome />} />
+          <Route path='/pets' element={<PetsList />} />
+          <Route path='/pets/new' element={<PetForm />} />
+          <Route path='/pets/:id/edit' element={<PetEditForm />}/>
+          <Route path='/toys' element={<ToysList />} />
       </Routes>
     </div>
   )
