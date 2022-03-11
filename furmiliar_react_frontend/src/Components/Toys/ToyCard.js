@@ -28,10 +28,10 @@ export default function ToyCard(props) {
         <h5>Price: {props.price}</h5>
         <h5>Website: <a href={props.url}>{props.url}</a></h5>
         <h5>Rating: {props.rating}</h5>
-        <h5>Needs Repair?: {props.needs_repair.toString()}</h5>
-        <h5>Squeaker?: {props.squeaker.toString()}</h5>
-        <h5>Crinkle?: {props.crinkle.toString()}</h5>
-        <h5>Hides Treats?: {props.treat.toString()}</h5>
+        <h5>Needs Repair?: {props.needs_repair === null ? <p>N/A</p> : props.needs_repair.toString()}</h5>
+        <h5>Squeaker?: {props.squeaker === null ? <p>N/A</p> : props.squeaker.toString()}</h5>
+        <h5>Crinkle?: {props.crinkle === null ? <p>N/A</p> : props.crinkle.toString()}</h5>
+        <h5>Hides Treats?: {props.treat === null ? <p>N/A</p> : props.treat.toString()}</h5>
         
         <button onClick={handleEdit}>
           <GrEdit />
