@@ -20,14 +20,17 @@ export default function PetForm() {
     }
 
     return (
-        <form className='pet-form' onSubmit={handleSubmit}>
-            <label htmlFor='pet-name-input'>Pet's Name:</label>
-            <input type='text' id='pet-name-input' value={name} onChange={e => setName(e.target.value)}/>
-            <label htmlFor='pet-photo-url-input'>URL of Pet's Photo:</label>
-            <input type='text' id='pet-photo-url-input' value={photo} onChange={e => setPhoto(e.target.value)}/>
-            <div className='full-width-pet'>
-                <button type='submit'>Register Pet</button>
-            </div>
-        </form>
+        <div>
+            <h2 id='register-pet'>Register Your Pet:</h2>
+            <form className='pet-form' onSubmit={handleSubmit}>
+                <label htmlFor='pet-name-input'>Pet's Name:</label>
+                <input type='text' id='pet-name-input' value={name} onChange={e => setName(e.target.value)}/>
+                <label htmlFor='pet-photo-url-input'>URL of Pet's Photo:</label>
+                <input type='text' id='pet-photo-url-input' value={photo} onChange={e => setPhoto(e.target.value)}/>
+                <div className='full-width-pet'>
+                    <button type='submit'>Register Pet</button>
+                </div>
+            </form>
+        </div>
     )
 } 
