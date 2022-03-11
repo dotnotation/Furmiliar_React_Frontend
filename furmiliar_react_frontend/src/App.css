@@ -151,5 +151,19 @@ button {
   to {transform: rotate(35deg);}
 }
 
+footer {
+  background-color: #D5E9C5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  padding-left: 2rem;
+}
+
 
 

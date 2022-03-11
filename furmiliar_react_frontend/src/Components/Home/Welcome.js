@@ -1,4 +1,5 @@
 import React from 'react'
+import { AiFillGithub } from 'react-icons/ai'
 
 export default function Welcome() {
   return (
@@ -11,6 +12,18 @@ export default function Welcome() {
 
       <p>Disclaimer: There is still so many features I want to add to this app. For instance future plans are to add users, a search feature, and maybe even a toy of the day. If you have other suggestions, please feel free to email me at dorthythielsen@gmail.com. </p>
       <img id='paw' src={require("../../Assets/paw.png")} alt='dog paw print' />
+      <footer className="row">
+        <div className="col-md-6 mt-md-0 mt-3">
+          <span>This App was made with React/Redux using React Router 6 and hooks.</span>
+        </div>
+        <div className="col-md-3 mb-md-0 mb-3">
+        <a href="https://github.com/dotnotation">
+          <AiFillGithub />
+        </a>
+        </div>
+
+        <div className="col-md-3 mb-md-0 mb-3">© 2022 Copyright: Dorthy Thielsen</div>
+      </footer>
     </div>
   )
 }
