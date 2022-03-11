@@ -117,5 +117,10 @@ h2 {
 button {
   color:#764C85;
   background-color: #A9E0FC;
+  border-radius: 8px !important;
+  text-decoration: none;
+  border: none;
+  margin: 4px 2px !important;
+  box-shadow: 2px 2px #764C85;
 }
 
