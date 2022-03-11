@@ -32,7 +32,7 @@ export default function ToysList() {
         <h2>{petName}'s Toy Box</h2>
       </div>
     {console.log(toys)}
-    {<ToyForm />}
+    {<ToyForm pet_id={petId}/>}
     {currentPetToys.length === 0 ? <h3>This pet has no toys yet. Please use the form above to add a toy.</h3> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
   </div>
   )

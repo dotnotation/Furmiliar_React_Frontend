@@ -20,7 +20,7 @@ export default function NavigationBar() {
                   <img
                     alt="Dog with paw logo"
                     src={require("../../Assets/Logo-text.png")}
-                    height="140"
+                    width="400"
                     className="d-inline-block align-items-center"
                   />
                 </Navbar.Brand>
