@@ -122,5 +122,6 @@ button {
   border: none;
   margin: 4px 2px !important;
   box-shadow: 2px 2px #764C85;
+  font-weight: bold;
 }
 
