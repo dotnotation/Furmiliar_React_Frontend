@@ -2,21 +2,31 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 
-export default function ToyEditForm(props) {
+export default function ToyEditForm() {
     const dispatch = useDispatch()
     const location = useLocation()
+    
+    const toyId = location.state.id
+    const petId = location.state.pet_id
+    const toyName = location.state.name
+    const toyPhoto = location.state.photo
+    const toyBrand = location.state.brand
+    const toyPrice = location.state.price
+    const toyUrl = location.state.url
+    const toyRating = location.state.rating
 
-    const [photo, setPhoto] = useState('')
-    const [name, setName] = useState('')
-    const [brand, setBrand] = useState('')
-    const [price, setPrice] = useState('')
-    const [url, setUrl] = useState('')
-    const [rating, setRating] = useState('')
+    const [id] = useState(toyId)
+    const [photo, setPhoto] = useState(toyPhoto)
+    const [name, setName] = useState(toyName)
+    const [brand, setBrand] = useState(toyBrand)
+    const [price, setPrice] = useState(toyPrice)
+    const [url, setUrl] = useState(toyUrl)
+    const [rating, setRating] = useState(toyRating)
     const [needs_repair, setRepair] = useState('')
     const [squeaker, setSqueaker] = useState('')
     const [crinkle, setCrinkle] = useState('')
     const [treat, setTreat] = useState('')
-    const [pet_id] = useState(props.pet_id)
+    const [pet_id] = useState(petId)
 
     function handleSubmit(e){
         e.preventDefault()
@@ -94,6 +104,7 @@ export default function ToyEditForm(props) {
 
                 <div className='hidden'>
                     <input readOnly value={pet_id}/>
+                    <input readOnly value={id}/>
                 </div>
             
                 <div className='full-width'>
