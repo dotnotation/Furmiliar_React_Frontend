@@ -53,7 +53,7 @@
   height: 45rem;
   display: inline-block;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #A9E0FC
+  box-shadow: 3px 4px #A9E0FC;
 }
 
 .toy-photo {
@@ -123,5 +123,15 @@ button {
   margin: 4px 2px !important;
   box-shadow: 2px 2px #764C85;
   font-weight: bold;
+}
+
+.back-button {
+  text-align: center;
+}
+
+.toys {
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr);
+  gap: 0.5rem;
 }
 
