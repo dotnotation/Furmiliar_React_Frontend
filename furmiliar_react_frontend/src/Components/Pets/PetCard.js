@@ -11,12 +11,11 @@ export default function PetCard(props) {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    function handleEdit(){
-      console.log("hit edit", props.id)
-      // access pet
-      // put pet information in form
-      // update pet entry based on input
+    function handleEdit(e){
+      console.log("hit edit", props)
+      navigate(`${props.id}/edit`, {state: {id: props.id, name: props.name, photo: props.photo}})
     }
+ 
 
     // function handleDelete(){
     //   dispatch(rainbowBridge(props))
