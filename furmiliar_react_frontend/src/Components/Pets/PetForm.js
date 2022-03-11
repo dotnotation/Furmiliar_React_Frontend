@@ -31,6 +31,7 @@ export default function PetForm() {
                     <button type='submit'>Register Pet</button>
                 </div>
             </form>
+            <img id='paw' src={require("../../Assets/paw.png")} alt='dog paw print' />
         </div>
     )
 } 
