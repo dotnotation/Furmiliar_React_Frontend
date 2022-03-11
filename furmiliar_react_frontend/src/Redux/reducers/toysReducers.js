@@ -34,7 +34,7 @@ export default function toysReducers(state = initialState, action){
         case ADD_TOY:
             return {
                 ...state, 
-                pets: [...state.pets, action.payload]
+                toys: [...state.toys, action.payload]
             }
 
         default:

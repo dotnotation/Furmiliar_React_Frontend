@@ -13,16 +13,13 @@ export default function PetForm(props) {
     const [squeaker, setSqueaker] = useState('')
     const [crinkle, setCrinkle] = useState('')
     const [treat, setTreat] = useState('')
-    const [pet_id, setPetId] = useState(props.pet_id)
-    console.log("toy form", pet_id)
-    
-
+    const [pet_id] = useState(props.pet_id)
 
     const dispatch = useDispatch()
 
     function handleSubmit(e){
         e.preventDefault()
-        console.log(e.target.value)
+        // console.log(e.target.value)
         // take data and send it to redux so need dispatch
         dispatch(adoptToy({
             photo: photo, 
@@ -47,13 +44,12 @@ export default function PetForm(props) {
         setSqueaker('')
         setCrinkle('')
         setTreat('')
-        setPetId('')
     }
 
     // function handleChange(e) {
     //     console.log(e.target.value)
     // }
-
+// debugger
     return (
         <form className='toy-form' onSubmit={handleSubmit}>
             <div className='full-width'>
@@ -92,33 +88,33 @@ export default function PetForm(props) {
 
             <div>
                 <strong>Needs Repair?:</strong>
-                <input type='radio' id='toy-repair-input-true' label='true' value='true' checked={needs_repair === true} onChange={e => setRepair(e.target.value)}/>
+                <input type='radio' id='toy-repair-input-true' label='true' value='true' checked={needs_repair === 'true'} onChange={e => setRepair(e.target.value)}/>
                 <label htmlFor='toy-rating-input-true'>True</label>
-                <input type='radio' id='toy-repair-input-false' label='false' value='false' checked={needs_repair === false} onChange={e => setRepair(e.target.value)}/>
+                <input type='radio' id='toy-repair-input-false' label='false' value='false' checked={needs_repair === 'false'} onChange={e => setRepair(e.target.value)}/>
                 <label htmlFor='toy-rating-input-false'>False</label>
             </div>
 
             <div>
                 <strong>Squeaker?:</strong>
-                <input type='radio' id='toy-squeaker-input-true' label='true' value='true' checked={squeaker === true} onChange={e => setSqueaker(e.target.value)}/>
+                <input type='radio' id='toy-squeaker-input-true' label='true' value='true' checked={squeaker === 'true'} onChange={e => setSqueaker(e.target.value)}/>
                 <label htmlFor='toy-squeaker-input-true'>True</label>
-                <input type='radio' id='toy-squeaker-input' label='false' value='false' checked={squeaker === false} onChange={e => setSqueaker(e.target.value)}/>
+                <input type='radio' id='toy-squeaker-input' label='false' value='false' checked={squeaker === 'false'} onChange={e => setSqueaker(e.target.value)}/>
                 <label htmlFor='toy-squeaker-input-false'>False</label>
             </div>
 
             <div>
                 <strong>Crinkle?:</strong>
-                <input type='radio' id='toy-crinkle-input-true' label='true' value='true' checked={crinkle === true} onChange={e => setCrinkle(e.target.value)}/>
+                <input type='radio' id='toy-crinkle-input-true' label='true' value='true' checked={crinkle === 'true'} onChange={e => setCrinkle(e.target.value)}/>
                 <label htmlFor='toy-crinkle-input-true'>True</label>
-                <input type='radio' id='toy-crinkle-input-false' label='false' value='false' checked={crinkle === false} onChange={e => setCrinkle(e.target.value)}/>
+                <input type='radio' id='toy-crinkle-input-false' label='false' value='false' checked={crinkle === 'false'} onChange={e => setCrinkle(e.target.value)}/>
                 <label htmlFor='toy-crinkle-input-false'>False</label>
             </div>
 
             <div>
                 <strong>Hides Treats?:</strong>
-                <input type='radio' id='toy-treat-input-true' label='true' value='true' checked={treat === true} onChange={e => setTreat(e.target.value)}/>
+                <input type='radio' id='toy-treat-input-true' label='true' value='true' checked={treat === 'true'} onChange={e => setTreat(e.target.value)}/>
                 <label htmlFor='toy-treat-input-true'>True</label>
-                <input type='radio' id='toy-treat-input-false' label='false' value='false' checked={treat === false} onChange={e => setTreat(e.target.value)}/>
+                <input type='radio' id='toy-treat-input-false' label='false' value='false' checked={treat === 'false'} onChange={e => setTreat(e.target.value)}/>
                 <label htmlFor='toy-treat-input-false'>False</label>
             </div>
 

@@ -23,7 +23,7 @@ export default function ToysList() {
   console.log(petId)
   console.log(petName)
 
-  const currentPetToys = toys.filter(t => t.id == petId)
+  const currentPetToys = toys.filter(t => t.pet_id === petId)
 
   // debugger
   return (
@@ -31,7 +31,7 @@ export default function ToysList() {
       <div className='toy-box-message'>
         <h2>{petName}'s Toy Box</h2>
       </div>
-    {console.log(toys)}
+    {console.log("currentPetToys", currentPetToys)}
     {<ToyForm pet_id={petId}/>}
     {currentPetToys.length === 0 ? <h3>This pet has no toys yet. Please use the form above to add a toy.</h3> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
   </div>
