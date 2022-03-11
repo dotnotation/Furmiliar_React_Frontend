@@ -3,16 +3,29 @@ import { useDispatch } from 'react-redux'
 import { deleteToy } from '../../Redux/actions/toyActions'
 import { BsFillTrashFill } from 'react-icons/bs'
 import { GrEdit } from 'react-icons/gr'
+import { useNavigate } from 'react-router-dom'
 
 export default function ToyCard(props) {
     console.log(props)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    function handleEdit(){
-      console.log("hit edit", props.id)
-      // access pet
-      // put toy information in form
-      // update toy entry based on input
+    function launchEdit(){
+      console.log("hit edit", props)
+      navigate(`${props.id}/edit`, {state: {
+        id: props.id, 
+        photo: props.photo,
+        name: props.name, 
+        brand: props.brand, 
+        price: props.price, 
+        url: props.url,
+        rating: props.rating,
+        needs_repair: props.needs_repair,
+        squeaker: props.squeaker,
+        crinkle: props.crinkle,
+        treat: props.treat,
+        pet_id: props.pet_id
+      }})
     }
 
     // function handleDelete(){
@@ -33,7 +46,7 @@ export default function ToyCard(props) {
         <h5>Crinkle?: {props.crinkle === null ? <span>N/A</span> : props.crinkle.toString()}</h5>
         <h5>Hides Treats?: {props.treat === null ? <span>N/A</span> : props.treat.toString()}</h5>
         
-        <button onClick={handleEdit}>
+        <button onClick={launchEdit}>
           <GrEdit />
         </button>
         <button onClick={() => dispatch(deleteToy(props.id))}>

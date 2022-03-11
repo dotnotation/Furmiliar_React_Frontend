@@ -6,6 +6,7 @@ import PetEditForm from './Components/Pets/PetEditForm'
 import Welcome from './Components/Home/Welcome'
 import ToysList from './Components/Toys/ToysList'
 import NavigationBar from './Components/Navbar/Navbar'
+import ToyEditForm from './Components/Toys/ToyEditForm'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/pets/new' element={<PetForm />} />
           <Route path='/pets/:id/edit' element={<PetEditForm />}/>
           <Route path='/toys' element={<ToysList />} />
+          <Route path='/toys/:id/edit' element={<ToyEditForm />} />
       </Routes>
     </div>
   )
