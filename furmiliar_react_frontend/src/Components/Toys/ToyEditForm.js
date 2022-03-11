@@ -14,6 +14,11 @@ export default function ToyEditForm() {
     const toyPrice = location.state.price
     const toyUrl = location.state.url
     const toyRating = location.state.rating
+    const toyRepair = location.state.squeaker === null ? 'true' : location.state.needs_repair.toString()
+    const toySqueaker = location.state.squeaker === null ? 'true' : location.state.squeaker.toString()
+    const toyCrinkle = location.state.crinkle === null ? 'true' : location.state.squeaker.toString()
+    const toyTreat = location.state.treat === null ? 'true' : location.state.treat.toString()
+
 
     const [id] = useState(toyId)
     const [photo, setPhoto] = useState(toyPhoto)
@@ -22,23 +27,21 @@ export default function ToyEditForm() {
     const [price, setPrice] = useState(toyPrice)
     const [url, setUrl] = useState(toyUrl)
     const [rating, setRating] = useState(toyRating)
-    const [needs_repair, setRepair] = useState('')
-    const [squeaker, setSqueaker] = useState('')
-    const [crinkle, setCrinkle] = useState('')
-    const [treat, setTreat] = useState('')
+    const [needs_repair, setRepair] = useState(toyRepair)
+    const [squeaker, setSqueaker] = useState(toySqueaker)
+    const [crinkle, setCrinkle] = useState(toyCrinkle)
+    const [treat, setTreat] = useState(toyTreat)
     const [pet_id] = useState(petId)
 
     function handleSubmit(e){
         e.preventDefault()
+        console.log(needs_repair)
     }
 
     return (
         <div>
-            <h2>Edit Toy</h2>
+            <h2>Edit {toyName}'s Details:</h2>
             <form className='toy-form' onSubmit={handleSubmit}>
-                <div className='full-width'>
-                    <h3>Add a New Toy:</h3>
-                </div>
                 
                 <div>
                     <label htmlFor='toy-photo-url-input'>Photo URL:</label>
@@ -108,7 +111,7 @@ export default function ToyEditForm() {
                 </div>
             
                 <div className='full-width'>
-                    <button type='submit'>Add Toy</button>
+                    <button type='submit'>Update Toy</button>
                 </div>
             </form>
         </div>
