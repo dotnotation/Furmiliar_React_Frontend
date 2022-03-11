@@ -1,8 +1,8 @@
 import React from 'react'
-import DeleteIcon from '@mui/icons-material/Delete'
-import EditIcon from '@mui/icons-material/Edit'
 import { useDispatch } from 'react-redux'
 import { deleteToy } from '../../Redux/actions/toyActions'
+import { BsFillTrashFill } from 'react-icons/bs'
+import { GrEdit } from 'react-icons/gr'
 
 export default function ToyCard(props) {
     console.log(props)
@@ -32,8 +32,13 @@ export default function ToyCard(props) {
         <h5>Squeaker?: {props.squeaker}</h5>
         <h5>Crinkle?: {props.crinkle}</h5>
         <h5>Hides Treats?: {props.treat}</h5>
-        <EditIcon id='toy-edit-button' data-action='edit' aria-labelledby='edit-button-label' role='button' onClick={handleEdit}/>
-        <DeleteIcon id='toy-delete-button' data-action='delete'  aria-labelledby='delete-button-label' role='button' onClick={() => dispatch(deleteToy(props.id))}/>
+        
+        <button onClick={handleEdit}>
+          <GrEdit />
+        </button>
+        <button onClick={() => dispatch(deleteToy(props.id))}>
+          <BsFillTrashFill />
+        </button>
     </div>
   )
 }
