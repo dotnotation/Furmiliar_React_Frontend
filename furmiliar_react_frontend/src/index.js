@@ -14,7 +14,7 @@ ReactDOM.render(
     <Provider store={store}>
       <Router>
         <ErrorBoundary message="Something went wrong">
-        <App />
+          <App />
         </ErrorBoundary>
       </Router>
     </Provider> 
