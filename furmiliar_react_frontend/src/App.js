@@ -7,12 +7,14 @@ import Welcome from './Components/Home/Welcome'
 import ToysList from './Components/Toys/ToysList'
 import NavigationBar from './Components/Navbar/Navbar'
 import ToyEditForm from './Components/Toys/ToyEditForm'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
   return (
     <div className="App">
       <NavigationBar />
+      <Footer />
       <Routes>
           <Route path='/' element={<Welcome />} />
           <Route path='/pets' element={<PetsList />} />
