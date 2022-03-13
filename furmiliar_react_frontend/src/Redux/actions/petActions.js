@@ -18,16 +18,11 @@ export function adoptPet(pet, navigate){
             },
             body: JSON.stringify(pet)
         })
-        // above is persisting the pet to the backend
         .then(r => r.json())
         .then(pet => {
             dispatch({ type: ADD_PET, payload: pet })
             navigate("/pets")
         })
-        // this is adding the pet to redux
-        // adding the pet to state so the dom updates
-        // this pet is coming from the backend, so it isn't the same as the pet in the argument
-        // also want upon submission and updating the dom to redirect to /pets
     }
 }
 
@@ -60,6 +55,5 @@ export function rainbowBridge(id){
             console.log("second then", pet)
             dispatch({ type: REMOVE_PET, payload: pet })
         })
-        // .catch(err => alert(err))
     }
 }

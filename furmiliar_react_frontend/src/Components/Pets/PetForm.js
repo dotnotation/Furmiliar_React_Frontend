@@ -11,12 +11,9 @@ export default function PetForm() {
 
     function handleSubmit(e){
         e.preventDefault()
-        // take data and send it to redux so need dispatch
         dispatch(adoptPet({name: name, photo: photo}, navigate))
         setName("")
         setPhoto("")
-        // can't actually navigate here because of async to need to pass navigation to action
-        // you can't use hooks in redux but you can pass the function
     }
 
     return (
@@ -25,12 +22,15 @@ export default function PetForm() {
             <form className='pet-form' onSubmit={handleSubmit}>
                 <label htmlFor='pet-name-input'>Pet's Name:</label>
                 <input type='text' id='pet-name-input' value={name} onChange={e => setName(e.target.value)}/>
+                
                 <label htmlFor='pet-photo-url-input'>URL of Pet's Photo:</label>
                 <input type='text' id='pet-photo-url-input' value={photo} onChange={e => setPhoto(e.target.value)}/>
+                
                 <div className='full-width-pet'>
                     <button type='submit'>Register Pet</button>
                 </div>
             </form>
+            
             <img id='paw' src={require("../../Assets/paw.png")} alt='dog paw print' />
         </div>
     )

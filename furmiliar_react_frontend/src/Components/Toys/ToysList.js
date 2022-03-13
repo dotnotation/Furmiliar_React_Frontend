@@ -12,21 +12,13 @@ export default function ToysList() {
   const navigate = useNavigate()
   const petId = location.state.pet_id
   const petName = location.state.name
-    // console.log("props from navigate", props.id)
 
   useEffect(() => {
     dispatch(fetchToys())
   }, [])
 
-  useEffect(() => {
-    const pet = location.state
-  }, [location])
-  console.log(petId)
-  console.log(petName)
-
   const currentPetToys = toys.filter(t => t.pet_id === petId)
 
-  // debugger
   return (
     <div className='toys-list'>
       <div className='toy-box-message'>

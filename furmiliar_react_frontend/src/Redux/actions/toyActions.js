@@ -54,6 +54,5 @@ export function deleteToy(id){
             console.log("second then", toy)
             dispatch({ type: REMOVE_TOY, payload: toy })
         })
-        // .catch(err => alert(err))
     }
 }

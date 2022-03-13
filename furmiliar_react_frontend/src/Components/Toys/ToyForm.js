@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { adoptToy } from '../../Redux/actions/toyActions'
 
-export default function PetForm(props) {
+export default function ToyForm(props) {
     const [photo, setPhoto] = useState('')
     const [name, setName] = useState('')
     const [brand, setBrand] = useState('')
@@ -19,8 +19,6 @@ export default function PetForm(props) {
 
     function handleSubmit(e){
         e.preventDefault()
-        // console.log(e.target.value)
-        // take data and send it to redux so need dispatch
         dispatch(adoptToy({
             photo: photo, 
             name: name, 
@@ -46,10 +44,6 @@ export default function PetForm(props) {
         setTreat('')
     }
 
-    // function handleChange(e) {
-    //     console.log(e.target.value)
-    // }
-// debugger
     return (
         <form className='toy-form' onSubmit={handleSubmit}>
             <div className='full-width'>

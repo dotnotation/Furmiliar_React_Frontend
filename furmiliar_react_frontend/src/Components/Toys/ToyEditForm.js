@@ -130,6 +130,7 @@ export default function ToyEditForm() {
                     <button type='submit'>Update Toy</button>
                 </div>
             </form>
+            
             <div className='back-button'>
                 <button onClick={() => navigate(-1)}>Back</button>
             </div>

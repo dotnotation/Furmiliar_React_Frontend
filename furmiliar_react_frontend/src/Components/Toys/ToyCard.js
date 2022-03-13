@@ -6,32 +6,27 @@ import { GrEdit } from 'react-icons/gr'
 import { useNavigate } from 'react-router-dom'
 
 export default function ToyCard(props) {
-    console.log(props)
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
+  
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
-    function launchEdit(){
-      console.log("hit edit", props)
-      navigate(`${props.id}/edit`, {state: {
-        id: props.id, 
-        photo: props.photo,
-        name: props.name, 
-        brand: props.brand, 
-        price: props.price, 
-        url: props.url,
-        rating: props.rating,
-        needs_repair: props.needs_repair,
-        squeaker: props.squeaker,
-        crinkle: props.crinkle,
-        treat: props.treat,
-        pet_id: props.pet_id
-      }})
-    }
+  function launchEdit(){
+    navigate(`${props.id}/edit`, {state: {
+      id: props.id, 
+      photo: props.photo,
+      name: props.name, 
+      brand: props.brand, 
+      price: props.price, 
+      url: props.url,
+      rating: props.rating,
+      needs_repair: props.needs_repair,
+      squeaker: props.squeaker,
+      crinkle: props.crinkle,
+      treat: props.treat,
+      pet_id: props.pet_id
+    }})
+  }
 
-    // function handleDelete(){
-    //   dispatch(deleteToy(props))
-    //   console.log("handleDelete", props)
-    // }
 
   return (
     <div className='toy-card' key={props.id}>
@@ -49,6 +44,7 @@ export default function ToyCard(props) {
         <button onClick={launchEdit}>
           <GrEdit />
         </button>
+        
         <button onClick={() => dispatch(deleteToy(props.id))}>
           <BsFillTrashFill />
         </button>
