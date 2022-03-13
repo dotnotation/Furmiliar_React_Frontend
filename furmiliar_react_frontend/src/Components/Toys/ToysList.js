@@ -30,7 +30,7 @@ export default function ToysList() {
         <button onClick={() => navigate(-1)}>Back</button>
     </div>
     <div className='toys'>
-      {currentPetToys.length === 0 ? <h3>This pet has no toys yet. Please use the form above to add a toy.</h3> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
+      {currentPetToys.length === 0 ? <h2>This pet has no toys yet. Please use the form above to add a toy.</h2> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
     </div>
   </div>
   )
