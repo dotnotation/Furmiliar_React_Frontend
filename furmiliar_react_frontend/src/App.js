@@ -9,21 +9,24 @@ import NavigationBar from './Components/Navbar/Navbar'
 import ToyEditForm from './Components/Toys/ToyEditForm'
 import Footer from './Components/Footer/Footer'
 import ToyRandom from './Components/Toys/ToyRandom'
+import ErrorBoundary from './ErrorBoundary'
 
 function App() {
 
   return (
     <div className="App">
       <NavigationBar />
-      <Routes>
-          <Route path='/' element={<Welcome />} />
-          <Route path='/pets' element={<PetsList />} />
-          <Route path='/pets/new' element={<PetForm />} />
-          <Route path='/pets/:id/edit' element={<PetEditForm />}/>
-          <Route path='/toys' element={<ToysList />} />
-          <Route path='/toys/:id/edit' element={<ToyEditForm />} />
-          <Route path='/toys/random' element={<ToyRandom />} />
-      </Routes>
+      <ErrorBoundary message="Something went wrong">
+        <Routes>
+            <Route path='/' element={<Welcome />} />
+            <Route path='/pets' element={<PetsList />} />
+            <Route path='/pets/new' element={<PetForm />} />
+            <Route path='/pets/:id/edit' element={<PetEditForm />}/>
+            <Route path='/toys' element={<ToysList />} />
+            <Route path='/toys/:id/edit' element={<ToyEditForm />} />
+            <Route path='/toys/random' element={<ToyRandom />} />
+        </Routes>
+      </ErrorBoundary>
       <Footer />
     </div>
   )

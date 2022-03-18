@@ -57,6 +57,17 @@
   margin-bottom: 2rem;
 }
 
+.toy-card-random {
+  text-align: center;
+  width: 40%;
+  margin: 2rem 30% 30%;
+  border: grey solid 1px;
+  border-radius: 25px;
+  box-shadow: 3px 4px #A9E0FC;
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+
 .toy-photo {
   justify-self: center;
   height: 12rem;

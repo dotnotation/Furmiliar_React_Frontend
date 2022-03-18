@@ -7,15 +7,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './Redux/store'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ErrorBoundary from './ErrorBoundary'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <ErrorBoundary message="Something went wrong">
-          <App />
-        </ErrorBoundary>
+        <App />
       </Router>
     </Provider> 
   </React.StrictMode>,
