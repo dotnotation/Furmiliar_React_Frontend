@@ -54,6 +54,7 @@
   display: inline-block;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #A9E0FC;
+  margin-bottom: 2rem;
 }
 
 .toy-photo {
@@ -67,14 +68,11 @@
   text-align: center;
   border: grey solid 1px;
   border-radius: 25px;
-  width: 80rem;
   height: 6rem;
   display: inline-block;
   margin: 1rem 2rem;
   padding: 2rem;
   box-shadow: 3px 4px #A9E0FC;
-  margin-left: 10%;
-  margin-right: 25%;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 10px;
@@ -85,7 +83,6 @@
   border: grey solid 1px;
   border-radius: 25px;
   padding: 2rem;
-  width: 100rem;
   height: 15rem;
   margin: 1rem 1rem;
   box-shadow: 3px 4px #A9E0FC;
@@ -140,9 +137,14 @@ button {
   font-weight: bold;
 }
 
+.buffer {
+  margin-bottom: 4rem;
+}
+
 #paw {
+  height: 25rem;
   padding: 3rem;
-  margin-left: 30%;
+  margin-left: 40%;
   animation: paw 1s infinite linear alternate;
 }
 
@@ -163,6 +165,7 @@ footer {
   width: 100%;
   position: fixed;
   padding-left: 2rem;
+  margin-top: auto;
 }
 
 

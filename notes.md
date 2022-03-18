@@ -13,7 +13,7 @@ Project Requirements:
 
 
 ToDO:
-[ ]Center forms on page
-[ ]Add margin to bottom of toy cards so footer doesn't cut them off
+[x]Center forms on page
+[x]Add margin to bottom of toy cards so footer doesn't cut them off
 [ ]Put console.logs everywhere and see how things are working
 [ ]Make random toy page maybe the toy has to be a rating of 5? 

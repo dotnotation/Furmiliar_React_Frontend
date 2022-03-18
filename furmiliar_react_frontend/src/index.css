@@ -12,6 +12,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
   color: #764C85 !important;
+  margin-bottom: 10rem;
+  min-height: 400px;
+  clear: both;
 }
 
 code {

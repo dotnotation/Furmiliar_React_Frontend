@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <Footer />
       <Routes>
           <Route path='/' element={<Welcome />} />
           <Route path='/pets' element={<PetsList />} />
@@ -23,6 +22,7 @@ function App() {
           <Route path='/toys' element={<ToysList />} />
           <Route path='/toys/:id/edit' element={<ToyEditForm />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

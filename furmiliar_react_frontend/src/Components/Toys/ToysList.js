@@ -32,6 +32,8 @@ export default function ToysList() {
     <div className='toys'>
       {currentPetToys.length === 0 ? <h2>This pet has no toys yet. Please use the form above to add a toy.</h2> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
     </div>
+    <div className='buffer'>
+    </div>
   </div>
   )
 }
