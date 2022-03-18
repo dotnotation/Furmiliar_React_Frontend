@@ -45,13 +45,11 @@ export function editToy(toy, navigate){
 
 export function deleteToy(id){
     return dispatch => {
-        console.log(id)
         fetch(`http://localhost:3000/toys/${id}`, {
             method: 'DELETE'
         })
         .then(r => r.json())
         .then(toy => {
-            console.log("second then", toy)
             dispatch({ type: REMOVE_TOY, payload: toy })
         })
     }

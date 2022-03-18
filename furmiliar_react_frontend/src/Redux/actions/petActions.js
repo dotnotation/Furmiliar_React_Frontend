@@ -52,7 +52,6 @@ export function rainbowBridge(id){
         })
         .then(r => r.json())
         .then(pet => {
-            console.log("second then", pet)
             dispatch({ type: REMOVE_PET, payload: pet })
         })
     }

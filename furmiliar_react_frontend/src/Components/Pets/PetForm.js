@@ -12,8 +12,8 @@ export default function PetForm() {
     function handleSubmit(e){
         e.preventDefault()
         dispatch(adoptPet({name: name, photo: photo}, navigate))
-        setName("")
-        setPhoto("")
+        setName('')
+        setPhoto('')
     }
 
     return (
@@ -31,7 +31,7 @@ export default function PetForm() {
                 </div>
             </form>
             
-            <img id='paw' src={require("../../Assets/paw.png")} alt='dog paw print' />
+            <img id='paw' src={require('../../Assets/paw.png')} alt='dog paw print' />
         </div>
     )
 } 

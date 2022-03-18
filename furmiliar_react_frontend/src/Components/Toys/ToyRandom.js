@@ -9,7 +9,6 @@ export default function ToyRandom() {
     const highlyRated = toys.filter(t => t.rating === 5)
     const random = Math.floor(Math.random()*highlyRated.length)
     const toyOfTheDay = highlyRated[random]
-    console.log(toys, toyOfTheDay)
 
     useEffect(() => {
         dispatch(fetchToys())

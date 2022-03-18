@@ -37,7 +37,6 @@ export default function ToyEditForm() {
 
     function handleSubmit(e){
         e.preventDefault()
-        console.log(needs_repair)
         dispatch(editToy({
             id: id,
             photo: photo,

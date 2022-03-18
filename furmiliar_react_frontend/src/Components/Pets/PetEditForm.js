@@ -20,9 +20,8 @@ export default function PetEditForm() {
  
    function handleSubmit(e){
        e.preventDefault()
-       console.log(name, photo, id)
        dispatch(editPet({name: name, photo: photo, id: id}, navigate))
-   }
+    }
  
     return (
         <div>

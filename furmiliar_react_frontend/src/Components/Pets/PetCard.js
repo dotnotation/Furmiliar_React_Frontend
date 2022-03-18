@@ -12,12 +12,10 @@ export default function PetCard(props) {
   const navigate = useNavigate()
 
   function launchEdit(){
-    console.log("hit edit", props)
     navigate(`${props.id}/edit`, {state: {id: props.id, name: props.name, photo: props.photo}})
   }
 
   function openToyBox(){
-    console.log("opening toy box", props.id)
     navigate('/toys', {state: { pet_id: props.id, name: props.name}})
   }
 

@@ -24,16 +24,19 @@ export default function ToysList() {
       <div className='toy-box-message'>
         <h2>{petName}'s Toy Box</h2>
       </div>
-    {console.log("currentPetToys", currentPetToys)}
-    {<ToyForm pet_id={petId}/>}
-    <div className='back-button'>
+      
+      {<ToyForm pet_id={petId}/>}
+      
+      <div className='back-button'>
         <button onClick={() => navigate(-1)}>Back</button>
+      </div>
+      
+      <div className='toys'>
+        {currentPetToys.length === 0 ? <h2>This pet has no toys yet. Please use the form above to add a toy.</h2> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
+      </div>
+      
+      <div className='buffer'>
+      </div>
     </div>
-    <div className='toys'>
-      {currentPetToys.length === 0 ? <h2>This pet has no toys yet. Please use the form above to add a toy.</h2> : currentPetToys.map(t => <ToyCard key={t.id} {...t}/>)}
-    </div>
-    <div className='buffer'>
-    </div>
-  </div>
   )
 }
