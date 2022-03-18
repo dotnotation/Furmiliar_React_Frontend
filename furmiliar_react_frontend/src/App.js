@@ -8,6 +8,7 @@ import ToysList from './Components/Toys/ToysList'
 import NavigationBar from './Components/Navbar/Navbar'
 import ToyEditForm from './Components/Toys/ToyEditForm'
 import Footer from './Components/Footer/Footer'
+import ToyRandom from './Components/Toys/ToyRandom'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/pets/:id/edit' element={<PetEditForm />}/>
           <Route path='/toys' element={<ToysList />} />
           <Route path='/toys/:id/edit' element={<ToyEditForm />} />
+          <Route path='/toys/random' element={<ToyRandom />} />
       </Routes>
       <Footer />
     </div>

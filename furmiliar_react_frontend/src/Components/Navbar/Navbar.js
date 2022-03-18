@@ -27,6 +27,7 @@ export default function NavigationBar() {
                 <Nav className="mb-0 my-5 ms-auto">
                   <Nav.Link href="/pets">All Pets</Nav.Link>
                   <Nav.Link href="/pets/new">Register Your Pet</Nav.Link>
+                  <Nav.Link href="/toys/random">Toy of the Day</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
