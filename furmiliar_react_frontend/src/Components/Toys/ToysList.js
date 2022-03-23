@@ -17,7 +17,7 @@ export default function ToysList() {
     dispatch(fetchToys())
   }, [])
 
-  const currentPetToys = toys.filter(t => t.pet_id === petId)
+  const currentPetToys = [...toys].filter(t => t.pet_id === petId)
 
   return (
     <div className='toys-list'>

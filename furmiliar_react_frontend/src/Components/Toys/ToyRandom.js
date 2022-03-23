@@ -6,7 +6,7 @@ import ToyRandomCard from './ToyRandomCard'
 export default function ToyRandom() {
     const toys = useSelector(state => state.toysReduce.toys)
     const dispatch = useDispatch()
-    const highlyRated = toys.filter(t => t.rating === 5)
+    const highlyRated = [...toys].filter(t => t.rating === 5)
     const random = Math.floor(Math.random()*highlyRated.length)
     const toyOfTheDay = highlyRated[random]
 
