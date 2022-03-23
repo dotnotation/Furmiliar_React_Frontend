@@ -18,13 +18,13 @@ function App() {
       <NavigationBar />
       <ErrorBoundary message="Something went wrong">
         <Routes>
-            <Route path='/' element={<Welcome />} />
-            <Route path='pets' element={<PetsList />} />
-            <Route path='pets/new' element={<PetForm />} />
-            <Route path='pets/:id/edit' element={<PetEditForm />}/>
-            <Route path='toys' element={<ToysList />} />
-            <Route path='toys/:id/edit' element={<ToyEditForm />} />
-            <Route path='toys/random' element={<ToyRandom />} />
+          <Route path='/' element={<Welcome />} />
+          <Route path='pets' element={<PetsList />} />
+          <Route path='pets/new' element={<PetForm />} />
+          <Route path='pets/:id/edit' element={<PetEditForm />}/>
+          <Route path='toys' element={<ToysList />} />
+          <Route path='toys/:id/edit' element={<ToyEditForm />} />
+          <Route path='toys/random' element={<ToyRandom />} />
         </Routes>
       </ErrorBoundary>
       <Footer />

@@ -19,7 +19,6 @@ export default function petsReducers(state = initialState, action){
             }
 
         case REMOVE_PET: 
-            console.log("petsReducer", action.payload)
             const newPets = state.pets.filter(pet => pet.id !== action.payload)
             return {
                 ...state,

@@ -46,7 +46,6 @@ export function editPet(pet, navigate){
 
 export function rainbowBridge(id){
     return dispatch => {
-        console.log(id)
         fetch(`http://localhost:3000/pets/${id}`, {
             method: 'DELETE'
         })
