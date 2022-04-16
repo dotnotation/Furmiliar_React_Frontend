@@ -10,6 +10,7 @@ Install all required gems in the Gemfile by running `bundle install`. Create you
 
 <h3>Using Furmiliar:</h3>
 You can view all pets or register your own pet. Then you can select your pet and add toys to their toy box. There is full CRUD functionality with this app. Currently, their is no user aspect to this app which means you can CRUD other people's pets. The plan is to add users later. 
+<img src="./public/Furmiliar.gif" alt="preview of website" />
 
 
 <h3>Contributors:</h3>
